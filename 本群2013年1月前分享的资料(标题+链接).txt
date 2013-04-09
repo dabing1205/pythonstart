@@ -1,0 +1,380 @@
+﻿Git/Github使用方法小记 - Artoirus
+http://artori.us/git-github-usage/
+
+
+百度云计算BAE Django1.4配置说明 | 岭南六少 - 一朵在LAMP架构下挣扎的云
+http://blog.chedushi.com/archives/3443
+
+
+git使用详细介绍 - yulongfei的专栏 - 博客频道 - CSDN.NET
+http://blog.csdn.net/gemmem/article/details/7290125
+
+
+Python Import机制备忘-模块搜索路径(sys.path)、嵌套Import、package Import - 庞景元的技术专栏 - 博客频道 - CSDN.NET
+http://blog.csdn.net/kernelspirit/article/details/3381666
+
+
+Git
+http://blog.csdn.net/mci2004/article/details/7763399
+
+
+10048错误(WSAEADDRINUSE)的错误处理 - qllwenhua的专栏 - 博客频道 - CSDN.NET
+http://blog.csdn.net/qllwenhua/article/details/2419208
+
+
+Django实战（24）：总结 - 心内求法 - 博客频道 - CSDN.NET
+http://blog.csdn.net/thinkinside/article/details/7249001
+
+
+Django中Many2ManyField大记录集选择的解决方案 - Fisher的专栏 - 博客频道 - CSDN.NET
+http://blog.csdn.net/wenxuansoft/article/details/8111805
+
+
+Django+python+BeautifulSoup组合的垂直搜索爬虫 - yjp2006的专栏 - 博客频道 - CSDN.NET
+http://blog.csdn.net/yjp2006/article/details/5657964
+
+
+Setting up Django with Scrapy
+http://blog.just2us.com/2012/07/setting-up-django-with-scrapy/
+
+
+List of Twitter Bootstrap Resources | Bootsnipp.com
+http://bootsnipp.com/resources
+
+
+Connect jump to http://www.cyrec.org/posts/python-twisted
+python twisted教程 一,异步编程
+http://cc.ecjtu.net/posts/python-twisted
+
+
+Django Class-Based-View Inspector -- Classy CBV
+http://ccbv.co.uk/
+
+
+Connect jump to https://developers.google.com/edu/python/?hl=zh-CN
+Google's Python Class - Educational Materials
+http://code.google.com/intl/zh-CN/edu/languages/google-python-class/
+
+
+django-ucenter -
+ 
+ 
+ django ucenter实现 - Google Project Hosting
+http://code.google.com/p/django-ucenter/
+
+
+Setting up Apache2, mod_python, MySQL, and Django on Debian Lenny or Ubuntu Hardy Heron | Code Spatter
+http://codespatter.com/2008/10/15/setting-up-apache2-mod_python-mysql-and-django-on-debian-lenny-or-ubuntu-hardy-heron/
+
+
+Blog - [转]什么样的人有福气 - Django梦之队(DDTCMS官网)--贱狗邦基地
+http://ddtcms.com/blog/archive/2012/11/19/56/who-will-own-happyness/
+
+
+Blog - The _imagingft C module is not installed - Django梦之队(DDTCMS官网)--贱狗邦基地
+http://ddtcms.com/blog/archive/2012/11/20/57/The-_imagingft-C-module-is-not-installed-on-windows/
+
+
+Blog - 真正的人才，不是能够评判是非、指出对错的人，而是能够让事情变得更好的人 - Django梦之队(DDTCMS官网)--贱狗邦基地
+http://ddtcms.com/blog/archive/2012/11/23/59/the-real-talent/
+
+
+DDTCMS 0.4 先简单发一个 - 新闻 - Django梦之队(DDTCMS官网)--贱狗邦基地
+http://ddtcms.com/news/2012/11/20/100/ddtcms-0-4-xian-jian-dan-fa-yi-ge/
+
+
+DDTCMS-0.4 for BAE - 新闻 - Django梦之队(DDTCMS官网)--贱狗邦基地
+http://ddtcms.com/news/2012/11/22/101/ddtcms-0-4-for-bae/
+
+
+首页 - DDTCMS 0.4 百度云演示
+http://ddtcmsdemo.duapp.com/
+
+
+登录 | Django 站点管理员
+http://ddtcmsdemo.duapp.com/admin/
+
+
+News  - DDTCMS 0.4 百度云演示
+http://ddtcmsdemo.duapp.com/news/solutions/
+
+
+Connect jump to http://www.divshot.com/
+Divshot: Interface Builder for Web Apps
+http://divshot.com/
+
+
+The Django Book
+http://djangobook.py3k.cn/2.0/
+
+
+20.16. urlparse — Parse URLs into components
+http://docs.python.org/2/library/urlparse.html
+
+
+
+http://download.csdn.net/my/uploads/2
+
+
+斗战神激活码领取_斗战神官网合作站_超级玩家
+http://dzs.sgamer.com/
+
+
+
+http://eurasiazyl.sinaapp.com/
+
+
+Fontello - icon fonts generator
+http://fontello.com/
+
+
+继承Jquery的方法--实现HTML5输入框的placeholder效果_杜英华_百度空间
+http://hi.baidu.com/duyinghua888/item/431b41766ef62c24d6a89c50
+
+
+【转】Android 脚本设计之 SL4A_好风长吟_百度空间
+http://hi.baidu.com/huxyz1991/item/a9c0b539e23f5708ceb9fe82
+
+
+Connect jump to http://hi.baidu.com/com/forbid/user
+该空间被封禁
+http://hi.baidu.com/kissdev/item/c87c52f56e62aad543c36a4e
+
+
+SQLAlchemy的使用_飞飞世界--技术交流中心_百度空间
+http://hi.baidu.com/xuxiaomin024/item/e3ffa7dd2e07f61d20e2504e
+
+
+笔记本电脑 - 价格 最新报价 品牌 - 易迅网
+http://list.51buy.com/234-4000t6000-6-11-24-0-1--.html?YTAG=1.100087159
+
+
+被解放的姜戈 台湾预告片2 (中文字幕)
+http://movie.douban.com/trailer/126691/
+
+
+Django另一个隐含函数permalink - 匪兵的日志 - 网易博客
+http://mxjloveyou.blog.163.com/blog/static/1762546892012231105635330/
+
+
+在django的admin使用ckeditor模块 -  web改变生活，生活改变web - 开源中国社区
+http://my.oschina.net/tenking/blog/29353
+
+
+8岁小学生表白遭拒：被一部iPhone打败_IT新闻_博客园
+http://news.cnblogs.com/n/165597/
+
+
+联想Yoga Style寒冬超体验  Win8双模自由变换_联想平板电脑_平板电脑新闻-中关村在线
+http://pad.zol.com.cn/339/3397999.html
+
+
+Django梦之队作品集_免费高速下载|百度云 网盘-分享无限制
+http://pan.baidu.com/share/link?shareid=123200&uk=655353904
+
+
+DDTCMS.com 资源下载_免费高速下载|百度云 网盘-分享无限制
+http://pan.baidu.com/share/link?shareid=96710&uk=655353904
+
+
+Connect jump to https://pypi.python.org/pypi/chardet
+chardet 2.1.1 : Python Package Index
+http://pypi.python.org/pypi/chardet
+
+
+圈爱网
+http://qiqingge.sinaapp.com/topic/book/list/
+
+
+圈爱网
+http://qiqingge.sinaapp.com/topic/book/list/a1/
+
+
+圈爱网
+http://qiqingge.sinaapp.com/topic/book/list/a1/a2
+
+
+github连接出现Bad file number问题 - 菜鸟浮出水 - 51CTO技术博客
+http://rangercyh.blog.51cto.com/1444712/749490
+
+
+Connect jump to http://www.vxplo.com/gwt/VxProject.html?nid=124&key=cc947e172d0c096e9bc1c69d5a63c5d03063990d2010eabe6ca34df74c44ee1a
+
+http://rrurl.cn/4jxVf6
+
+
+我的帐户 - Sina App Engine
+http://sae.sina.com.cn/?m=home&a=devlevel&level=normal_level&voteme=gJjGEI
+
+
+SAEpy-log v0.0.2 使用安装指南 - SAEPy blog
+http://saepy.sinaapp.com/topic/50/saepy-log-v0-0-2-
+
+
+Django and Scrapy without using DjangoItem - Python - Snipplr Social Snippet Repository
+http://snipplr.com/view/66985/django-and-scrapy-without-using-djangoitem/
+
+
+tornado testing @tornado.web.authenticated - Stack Overflow
+http://stackoverflow.com/questions/10936978/tornado-testing-tornado-web-authenticated
+
+
+python: SyntaxError: EOL while scanning string literal - Stack Overflow
+http://stackoverflow.com/questions/3561691/python-syntaxerror-eol-while-scanning-string-literal
+
+
+Connect jump to http://weibo.com/login.php?url=http%3A%2F%2Fq.weibo.com%2F559267%2Fstatus%2Fb4CGpqEe7
+新浪微博登录
+http://t.cn/S7AxHq
+
+
+mysql view(视图) - 清山 - ITeye技术网站
+http://thetopofqingshan.iteye.com/blog/1504069
+
+
+json 在线编辑器-脚本之家
+http://tools.jb51.net/tools/json/json_editor.htm
+
+
+Bootstrap
+http://twitter.github.com/bootstrap/
+
+
+Python reportlab教程_百度文库
+http://wenku.baidu.com/view/bffa7ceb19e8b8f67c1cb978.html
+
+
+GIT和SVN之间的五个基本区别 | 外刊IT评论网
+http://www.aqee.net/5-fundamental-differences-between-git-svn/
+
+
+百度搜索_django
+http://www.baidu.com/s?ie=utf-8&bs=django-pagination&f=8&rsv_bp=1&wd=django+
+
+
+百度搜索_windows svn apache
+http://www.baidu.com/s?ie=utf-8&bs=window+s+svn+apache&f=8&rsv_bp=1&rsv_spt=3&wd=windows+svn+apache&rsv_sug3=1&rsv_sug1=1&rsv_sug4=20&inputT=1095
+
+
+百度搜索_svn apache
+http://www.baidu.com/s?wd=svn+apache&rsv_bp=0&rsv_spt=3&rsv_sug3=5&rsv_sug=0&rsv_sug1=5&rsv_sug4=149&inputT=2179
+
+
+Connect to http://www.cnbeta.com/articles/216951.htm FAILED timed out
+
+http://www.cnbeta.com/articles/216951.htm
+
+
+Python装饰器学习（九步入门） - 张云贵 - 博客园
+http://www.cnblogs.com/rhcad/archive/2011/12/21/2295507.html
+
+
+The Django Book
+http://www.djangobook.com/en/2.0/index.html
+
+
+Connect jump to https://www.djangopackages.com/
+Django Packages : Django Packages reusable apps, sites and tools directory
+http://www.djangopackages.com/
+
+
+通过apk方式发行python脚本
+http://www.douban.com/group/topic/17362140/
+
+
+
+http://www.eqsc.gov.cn/
+
+
+考试酷(examcoo)-永久免费的电子作业与在线考试系统
+http://www.examcoo.com/
+
+
+在线考试系统设计与实现
+http://www.godempire.com/
+
+
+Connect jump to http://www.gosoa.com.cn/301%e3%80%81404%e3%80%81200%e3%80%81304%e7%ad%89http%e7%8a%b6%e6%80%81
+潘少宁的博客
+http://www.gosoa.com.cn/301
+
+
+Download JetBrains Python IDE :: PyCharm
+http://www.jetbrains.com/pycharm/download/
+
+
+开源遥控振动器？！(建议回家再看) - 开源中国 OSChina.NET
+http://www.oschina.net/news/35276/opensource-vibrator
+
+
+推荐 
+  
+  
+  -
+  所罗门 - 智慧人生  品味生活
+http://www.solomoz.com/
+
+
+Connect to http://www.test.com/ FAILED <urlopen error [Errno 10060] >
+
+http://www.test.com/
+
+
+The Useless Web
+http://www.theuselessweb.com/
+
+
+
+http://www.vxplo.com/gwt/VxProject.html?nid=124&key=cc947e172d0c096e9bc1c69d5a63c5d03063990d2010eabe6ca34df74c44ee1a
+
+
+HTML img tag
+http://www.w3schools.com/tags/tag_img.asp
+
+
+sl4a-chinese -
+ 
+ 
+ SL4A之Python资源中文化项目 - Google Project Hosting
+https://code.google.com/p/sl4a-chinese/
+
+
+ApiReference - 
+ sl4a-chinese -
+ 
+ 中文版api - 
+ SL4A之Python资源中文化项目 - Google Project Hosting
+https://code.google.com/p/sl4a-chinese/wiki/ApiReference
+
+
+Integrating Django with a legacy database | Django documentation | Django
+https://docs.djangoproject.com/en/1.4/howto/legacy-databases/
+
+
+Pagination | Django documentation | Django
+https://docs.djangoproject.com/en/1.4/topics/pagination/
+
+
+The Django admin site | Django documentation | Django
+https://docs.djangoproject.com/en/dev/ref/contrib/admin/
+
+
+Admin actions | Django documentation | Django
+https://docs.djangoproject.com/en/dev/ref/contrib/admin/actions/
+
+
+aobo711/bootstrap-django-admin · GitHub
+https://github.com/aobo711/bootstrap-django-admin
+
+
+encorehu 路 GitHub
+https://github.com/encorehu
+
+
+encorehu/yucmedia-captcha 路 GitHub
+https://github.com/encorehu/yucmedia-captcha
+
+
+Connect to https://help.github.com/articles/generating-ssh-keys FAILED <urlopen error [Errno 10061] >
+
+https://help.github.com/articles/generating-ssh-keys

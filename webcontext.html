@@ -1,0 +1,843 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Python中网络页面抓取和页面分析 - Sean的专栏 - 博客频道 - CSDN.NET</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="转载本文请以链接形式注明出处。1.前言&#160;&#160;&#160;&#160;&#160;&#160;&#160; Python的网络抓取有很多包可以实现，比如：urllib、urllib2、httplib、httplib2。其中httplib、httplib2是专门处理与http相关的；而urllib、urllib2是借助于httplib、httplib2实现的，相当于在httplib、httplib2上又封装了一层来进行处理web数据。而urll" />
+<script src="http://static.blog.csdn.net/scripts/jquery.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/ad.js?v=1.1"></script>
+<link rel="Stylesheet" type="text/css" href="http://static.blog.csdn.net/skin/ink/css/style.css?v=1.1" />
+<link id="RSSLink" title="RSS" type="application/rss+xml" rel="alternate" href="/lianxiang_biancheng/rss/list" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/default.css" />
+</head>
+<body>
+<script src="http://csdnimg.cn/pubnav/js/pub_topnav_2011.js"type="text/javascript"></script>
+<div id="container">
+<div id="header">
+    <div class="header">
+        <div id="blog_title">
+            <h1><a href="/lianxiang_biancheng">Sean的专栏</a></h1>
+            <h2>读万卷书，行万里路，胸中脱去尘浊，自然丘壑内营，立成鄄鄂！</h2>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div id="navigator">
+    <div class="navigator_bg"></div>
+    <div class="navigator">
+        <ul>
+            <li id="btnContents"><a href="/lianxiang_biancheng?viewmode=contents"><span><img src="http://static.blog.csdn.net/images/ico_list.gif">目录视图</span></a></li>
+            <li id="btnView"><a href="/lianxiang_biancheng?viewmode=list"><span><img src="http://static.blog.csdn.net/images/ico_summary.gif">摘要视图</span></a></li>
+            <li id="btnRss"><a href="/lianxiang_biancheng/rss/list"><span><img src="http://static.blog.csdn.net/images/ico_rss.gif">订阅</span></a></li>
+</ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var username = "lianxiang_biancheng";
+    var blog_address = "http://blog.csdn.net/lianxiang_biancheng";
+    var static_host = "http://static.blog.csdn.net";
+    var currentUserName = "";
+</script>
+        
+<div id="body">
+<div id="main">
+<div class="main">
+<div class="notice"> 
+
+<a href="http://surveies.csdn.net/survey/comein/532" target="_blank">
+<font color=blue>博客专家信息更新登记表   </font></a>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="http://blog.csdn.net/blogdevteam/article/details/8572108
+" target="_blank"><font color=red>社区专家谈 12306</font></a>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="http://bbs.csdn.net/topics/390373496
+" target="_blank"><font color=red>CSDN社区程序员回乡见闻活动火爆开始！
+
+</font></a>
+
+<br />
+
+
+
+
+
+<a href="http://www.csdn.net/article/2013-03-05/2814348"target="_blank">
+<font color=red>专访陈勇： 敏捷开发现状及发展之路
+
+ </font></a>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="http://huiyi.csdn.net/tech/view/223
+"target="_blank">
+<font color=red>“传统商家移动化之路”会议
+ </font></a>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="http://blog.csdn.net/csdnstudent/article/details/8077932"target="_blank">
+<font color=red>2013年全国百所高校巡讲讲师招募  </font></a>
+
+
+</div><div id="article_details" class="details">
+    <div class="article_title">
+    <span class="ico ico_type_Original"></span>
+    <h3>
+        <span class="link_title"><a href="/lianxiang_biancheng/article/details/7772487">
+        <font color="red">[置顶]</font>
+        Python中网络页面抓取和页面分析
+        </a></span>
+    </h3>
+</div>
+
+        
+    <div class="article_manage">
+        <span class="link_categories">
+        分类：
+            <a href="/lianxiang_biancheng/article/category/1188052">Python</a> 
+            <a href="/lianxiang_biancheng/article/category/1169744">搜索</a> 
+        </span>
+    <span class="link_postdate">2012-07-22 14:53</span>
+    <span class="link_view" title="阅读次数">1050人阅读</span>
+    <span class="link_comments" title="评论次数"><a href="#comments">评论</a>(0)</span>
+    <span class="link_collect"><a href="javascript:void(0);" onclick="javascript:collectArticle('Python中网络页面抓取和页面分析','7772487');return false;" title="收藏">收藏</a></span>
+    <span class="link_report"><a href="#report"  onclick="javascript:report(7772487,2);return false;" title="举报">举报</a></span>
+    
+</div>
+<div class="tag2box"><a href='http://blog.csdn.net/tag/details.html?tag=python' target=_blank>python</a><a href='http://blog.csdn.net/tag/details.html?tag=%e7%bd%91%e7%bb%9c' target=_blank>网络</a><a href='http://blog.csdn.net/tag/details.html?tag=html%e8%a7%a3%e6%9e%90%e5%99%a8' target=_blank>html解析器</a><a href='http://blog.csdn.net/tag/details.html?tag=html' target=_blank>html</a><a href='http://blog.csdn.net/tag/details.html?tag=import' target=_blank>import</a><a href='http://blog.csdn.net/tag/details.html?tag=dos' target=_blank>dos</a></div>
+
+
+    
+<div id="article_content" class="article_content">
+
+<p>转载本文请以链接形式注明出处。</p>
+<p><strong>1.前言</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Python的网络抓取有很多包可以实现，比如：urllib、urllib2、httplib、httplib2。其中httplib、httplib2是专门处理与http相关的；而urllib、urllib2是借助于httplib、httplib2实现的，相当于在httplib、httplib2上又封装了一层来进行处理web数据。而urllib2是urllib的高版本，httplib2是httplib的高版本。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 这里我给出一个学习python库的网址，里面有各种lib库的讲解：<a href="http://docs.python.org/library/index.html">http://docs.python.org/library/index.html</a>&nbsp; 。有兴趣的读者可以看一下。<br>
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 由于最近在使用httplib2进行网上抓取数据，所以下面对httplib2进行介绍。<br>
+</p>
+<p><strong>2.httplib2</strong></p>
+<p>(1)安装 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; httplib2的安装：首先下载python的httplib2的安装包，下载地址为：<a href="http://code.google.com/p/httplib2/downloads/list">http://code.google.com/p/httplib2/downloads/list</a>；其次， 在dos窗口下进入httplib2的解压目录，执行命令：python setup.py install&nbsp; 。 即完成安装。</p>
+<p>(2)使用讲解</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 下面再给出一个httplib2的学习地址，是httplib2的一个wiki，里面有几个httplib2的简单例子：<a href="http://code.google.com/p/httplib2/wiki/Examples">http://code.google.com/p/httplib2/wiki/Examples</a> 。</p>
+<p>(a)下面给出第一个httplib2的例子，根据weibo用户的ID，抓取用户相关信息：</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 这个例子涉及到cookies的使用，下面简单介绍一下cookies的问题：<br>
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 当用户抓取的网页需要登陆时，一般的登录页面只需要用户名和密码，此时我们可以采用username和password的python代码抓取网页。但是当用户频繁的登录抓取时，此时登录页面就需要输入用户名、密码和一个<strong>随机数字图片验证</strong>，图片验证无法屏蔽掉。此时，我们这里可以采用先获取用户登陆后的cookies，再以http的get请求的方式向用户发送headers（该headers包含用户登陆后的cookies信息），这样就避免了登陆。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 获取cookies的方法我感觉有2种，一种是手工方式：通过fiddler软件来查看，当用户在浏览器里输入请求的网址时，通过fiddler就可以查看用户的http的响应，具体的过程如下面2张图片所示，第一张图片是fiddler查看cookies的header，第二张图是拷贝该header：</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="http://my.csdn.net/uploads/201207/23/1343015697_7819.png" alt=""></p>
+<p><img src="http://my.csdn.net/uploads/201207/23/1343015711_8374.png" alt=""><br>
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第二种获取cookies的方式，可以第一次通过用户名和密码向url发出请求，然后将请求后的response中的headers的cookies保存下来，下次就可以根据cookies去登录该url并获取页面内容。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 好，cookies介绍完毕，咱们回来，下面给出第一个demo（通过cookie登陆获取微博页面，并抓取微博用户信息）：<br>
+</p>
+<p></p>
+<pre name="code" class="python">#!/usr/bin/python
+# -*-coding:utf-8 -*-
+import httplib2
+import urllib2
+import re #正则表达式模块
+
+class WeiboClass: #定义一个weibo类
+
+    #获取指定url的网页内容
+    def get_content(self,url,headers,id):
+        http=httplib2.Http()
+        response,content=http.request(url+str(id),'GET',headers=headers)
+        #print url+str(id)
+        return content.decode('unicode-escape').encode('utf-8')
+
+    #判断weibo的用户是否是企业用户
+    def is_company(self,url,headers,id):
+        content=self.get_content(url,headers,id)
+        title=r'行业'
+        company_title=re.compile(title) 
+        if company_title.search(content): #使用正则表达式对title进行匹配        
+            return 1
+        else:
+            return 0
+        
+    #获取用户的weibo信息：ID，主页url，昵称
+    def get_info(self, url,headers,id):
+        flag=self.is_company(url,headers,id)
+        content=self.get_content(url,headers,id)
+        if flag==0:  #如果用户是个人用户            
+            #print content
+            #微博ID
+            id_flag=r'\$CONFIG\[\'oid\'\] = \'([0-9].+?)\';'
+            id_re=re.compile(id_flag)
+            id_regx=id_re.search(content)
+            id=id_regx.group(1)
+            print id
+
+            #微博url
+            url_flag=r'&lt;meta http-equiv=&quot;mobile-agent&quot; content=&quot;format=xhtml;&quot; url=&quot;weibo.cn/(.+?)\?'
+            url_re=re.compile(url_flag)
+            url_regx=url_re.search(content)
+            url_0=url_regx.group(1)
+            url='http://weibo.com/'+url_0
+            print url
+            
+            #昵称
+            name_flag='&lt;div class=&quot;name clearfix&quot;&gt;.+?&lt;div class=&quot;left&quot;&gt;(.+?)&lt;'
+            name_re=re.compile(name_flag,re.S)
+            name_regx=name_re.search(content)
+            name=name_regx.group(1)
+            name=name.decode('utf-8').encode('GBK')
+            print name
+
+def main():            
+    headers={&quot;cookie&quot;:'NSC_wjq_xfjcp.dpn_w3.6_w4=ffffffff0941137b45525d5f4f58455e445a4a423660; SUS=SID-1806453925-1342851885-XD-hgrjc-03210d75ca203f3ad0d57666a05ae49d; SUE=es%3Deabd0a14bc6e6123c5c4d058d9a2c96f%26ev%3Dv1%26es2%3Db50ae59b82b457a1ba54b2b7708fbb5b%26rs0%3DdP4RVYzORRwV64PFw6wRdNGBk0HP47V8C5SXUp%252F7Q9K2RcduYt4ECQbEDNZk%252Bs8GHDpW5wk%252B3%252FmYKP12zIyQbD1bUMd2wNBgdRX45p2rygizXgHMjH%252FFnU53HJFC2OfSvEHZADJkZD%252BTdLHidgoyy4maajVHi%252B%252B1en0zIKIf3mo%253D%26rv%3D0; SUP=cv%3D1%26bt%3D1342851885%26et%3D1342938285%26d%3Dc909%26i%3D4dc3%26us%3D1%26vf%3D0%26vt%3D0%26ac%3D0%26uid%3D1806453925%26user%3Dqipeng.sdsy%2540163.com%26ag%3D4%26name%3Dqipeng.sdsy%2540163.com%26nick%3D%25E4%25B8%2580%25E5%258C%25B9%25E5%259C%25A8%25E8%25B7%25AF%25E4%25B8%258A%25E7%259A%2584%25E9%25A9%25AC%26fmp%3D%26lcp%3D; SSOLoginState=1342851885; ads_ck=1; UOR=hao.360.cn,weibo.com,spr_web_360_hao360_weibo_t001:1342851234578; _olympicMedalsTable=; ULV=1342851891453:53:53:53:3919105774821.296.1342851890484:1342851070843; SinaRot/u/1806453925=25; un=qipeng.sdsy@163.com; __utma=182865017.1486634646.1342787238.1342787238.1342787238.1; __utmz=182865017.1342787238.1.1.utmcsr=weibo.com|utmccn=(referral)|utmcmd=referral|utmcct=/u/1806453925; myuid=1806453925; wvr=4; ALF=1343135290; SinaRot/u/1806453925%3Fgid%3D201108260278357557=77; SinaRot/u/1806453925%3Fc%3Dspr_web_360_hao360_weibo_t001=59; _s_tentry=-; Apache=3919105774821.296.1342851890484; SINAGLOBAL=3919105774821.296.1342851890484; BAYEUX_BROWSER=4e70u68yfp1x9xreh4wbcw2jfhs; JSESSI\
+ONID=3nvoas5ykh0e'}    
+    url='http://weibo.com/'
+    print headers
+    page = WeiboClass()
+    page.get_info(url,headers,1842764911)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</pre>
+<p>(b)下面给出httplib2的第二个例子<br>
+</p>
+<p></p>
+<pre name="code" class="python">#!/usr/bin/python
+# -*-coding:utf-8 -*-
+import sys;
+import os;
+import urllib2;
+import httplib2;
+import Cookie;
+import random;
+import re;
+import time;
+from urllib import urlencode;
+import hashlib;
+import datetime;
+import socket;
+
+#httplib2.debuglevel=1;
+
+def error_log(log):
+    sys.stderr.write(&quot;%s\n&quot; % (log));
+
+class ErrorCode:
+    Succ         = 0;
+    Unknown      = -1; # 未知原因
+
+class SimBrowser :
+    socket.setdefaulttimeout(10); # 超时限制 10秒
+    UserAgent=&quot;&quot;;
+    cookie=None;
+    httplink = httplib2.Http();    
+    httplink.follow_redirects = False;
+    hostname=&quot;&quot;;    
+    def __init__(self, cookie, UserAgent=&quot;Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 2.0.50727)&quot;):
+        self.cookie = cookie;
+        self.UserAgent = UserAgent;        
+        
+    def gen_cookie_str(self):
+        cookiestr = '; '.join(self.cookie.output(attrs=[], header=&quot;&quot;).split('\r\n'));
+        if len(cookiestr) &lt;= 0:
+            return &quot;&quot;;
+        else:
+            return cookiestr;
+    def prepare_request_header(self, header):
+        newheader = {};
+        cookiestr = self.gen_cookie_str();
+        if len(cookiestr) &gt; 0:
+            newheader['Cookie'] = cookiestr;        
+        # set agent
+        newheader['User-Agent'] = self.UserAgent;
+        
+        # replace or append user specified values in header
+        for key in header.keys():
+            newheader[key] = header[key];
+        return newheader;
+
+    # maintain cookies
+    def maintain_cookie(self, response_header):
+        if 'set-cookie' in response_header:
+            self.cookie.load(response_header['set-cookie']);            
+
+    def get_redirect_url(self, prevurl, res):
+        if 'location' not in res:
+            error_log('no location in res');
+            return &quot;&quot;;
+
+        location = res['location'];
+        if len(location) &lt;= 0:
+            error_log('location length is zero');
+            return &quot;&quot;;
+
+        # check location contain fullpath of target
+        if location.find(&quot;http://&quot;) != 0:
+            p = re.compile(r&quot;[(http://)]*[.\-_0-9A-Za-z]+&quot;);
+            m = p.match(prevurl);
+            if m != None:                
+                host = m.group();
+                return host + location;
+            else:
+                error_log('cannot get host link');
+                host = &quot;&quot;;
+        else:
+            return location;
+
+    def request(self, url, method=&quot;GET&quot;, headers={}, body=&quot;&quot;, follow_redirects=False): 
+        newheaders = self.prepare_request_header(headers);
+        newurl = url;
+        newbody = body;
+        while (True):
+            try:
+              res, content = self.httplink.request(newurl, method=method, headers=newheaders, body=newbody);
+              self.maintain_cookie(res);
+            except Exception , what:
+                try:
+                  res, content = self.httplink.request(newurl, method=method, headers=newheaders, body=newbody);
+                  self.maintain_cookie(res);
+                except Exception , what: 
+                    try:
+                      res, content = self.httplink.request(newurl, method=method, headers=newheaders, body=newbody);
+                      self.maintain_cookie(res);
+                    except Exception , what: # 访问获取 三次 不成功返回失败
+                        res='';
+                        content='';
+                        break;
+
+            # check redirects
+            if follow_redirects==False:
+                break;
+            elif res.status in(300, 301, 302):                
+                prevurl = newurl;
+                newheaders = self.prepare_request_header({});
+                newurl = self.get_redirect_url(prevurl, res);
+                body = &quot;&quot;;
+                method=&quot;GET&quot;;
+                if len(url) &gt; 0:
+                    continue;
+                else:
+                    sys.stderr.write(&quot;Error:failed to get redirect location\n&quot;);
+                    break;
+            else:
+                break;
+        return res, content;
+def main():
+    cookie = Cookie.SimpleCookie();
+    sim = SimBrowser(cookie);
+    
+    aurl='http://s.weibo.com/weibo/computer&amp;Refer=STopic_box';
+    myCookie = ('UOR=,weibo.com,; myuid=1369574593; un=zhaolianxiang@126.com; \
+un=zhaolianxiang@126.com; wvr=4; __utma=15428400.565128140.1342666019.13426660\
+19.1342666019.1; __utmz=15428400.1342666019.1.1.utmcsr=blog.sina.com.cn|utmccn\
+=(referral)|utmcmd=referral|utmcct=/s/blog_84313fa001010n90.html; NSC_wjq_xfjc\
+p.dpn_w3.6_w4=ffffffff0941010945525d5f4f58455e445a4a423660; SSOLoginState=1342\
+867370; _s_tentry=login.sina.com.cn; Apache=9964875415898.86.1342867464581; UL\
+V=1342867464624:7:7:4:9964875415898.86.1342867464581:1342514299919; SUE=es%3D6\
+c406ebb66f15ce0e5b852efa908d728%26ev%3Dv1%26es2%3D658950facb6ad8c9c8627639f31a\
+61de%26rs0%3Df6AWRRwcy3r7HJ7y1mdnQR5icnbFHj6Qt%252F6Og2%252FaDBwMtLGJbQhanphxu\
+EWsXCI1CPdl1yhB%252BHNobWvCmQPmF0xjrJhrvxCWAoiiE7D9cPDXQVOvlQPDsAopv10Un5DDuES\
+%252FZcPXtwnaCYnD5hcMAoDinTKgBxbeZ%252FBSiLzvEdQ%253D%26rv%3D0; SUP=cv%3D1%26b\
+t%3D1343009147%26et%3D1343095547%26d%3Dc909%26i%3D3d45%26us%3D1%26vf%3D0%26vt%\
+3D0%26ac%3D1%26uid%3D1842764911%26user%3Dzhaolianxiang%2540126.com%26ag%3D4%26\
+name%3Dzhaolianxiang%2540126.com%26nick%3DSean%26fmp%3D%26lcp%3D2011-12-25%252\
+012%253A59%253A36; SUS=SID-1842764911-1343009147-XD-cyk5d-215c6a72f1b3a340c301\
+533e2b4ce49d; ALF=1343095212; ads_ck=1; SinaRot/z/zhaolianxiang=44; SINAGLOBAL\
+=9964875415898.86.1342867464581; _olympicMedalsTable=; USRHAWB=usrmdins213_206');
+    headers={'Cookie':myCookie,'Content-Type':'application/x-www-form-urlencoded'};
+#    print &quot;myCookie:&quot;,myCookie;
+#    body={'path':'GET/material','userid':self.BaiduId,'token':self.token,'params':'{&quot;level&quot;:&quot;useracct&quot;,&quot;fields&quot;:[&quot;wregion&quot;,&quot;wbudget&quot;,&quot;userstat&quot;]}'};
+    #以http的方式向aurl发出get请求，同时将http的头headers发送过去
+    #这个headers包含了用户的登陆的cookies信息。cookies的获取可以通过fiddler软件来查看。
+    res, content = sim.request(aurl,'GET', headers=headers);
+    print &quot;res:&quot;,res  #输出http的响应response
+    #将获取的网页内容先解码，再以utf-8的形式编码
+    print &quot;content:&quot;,content.decode('unicode-escape').encode('utf-8');
+    
+
+if __name__ == &quot;__main__&quot;:
+    main();        
+        
+</pre>
+<p>注：上面的两个程序中的cookies均已失效，需要您通过我上面介绍的方法替换cookies中的内容。</p>
+<p>(3)总结</p>
+<p>使用cookie登陆抓取指定页面，可以像下面这样，这是一个最简洁的代码</p>
+<p></p>
+<pre name="code" class="python">#!/usr/bin/python
+# coding:utf-8 
+import httplib2
+import urllib2
+import re #正则表达式模块
+
+class PageClass:
+
+    #获取指定url的网页内容
+    def get_page(self,url,headers):
+        http=httplib2.Http()
+        response,content=http.request(url,'GET',headers=headers)
+        #return content.decode('unicode-escape').encode('utf-8')
+        return content.decode('unicode-escape').encode('utf-8')
+        
+def main():            
+    headers={&quot;cookie&quot;:'your cookie'}
+    url = 'http://fengchao.baidu.com'
+    #print headers
+    page = PageClass()
+    content = page.get_page(url,headers)
+    print content
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</pre>只需要输入url和headers就可以抓取到指定的页面。这里需要输入你自己的cookie。上面的代码执行后的结果如下，可以看到我们抓取到了内容：
+<p></p>
+<p><img src="http://img.my.csdn.net/uploads/201208/31/1346421120_6944.png" alt=""><br>
+</p>
+<p><strong>3.XPath</strong><br>
+</p>
+<p></p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 将抓取到的页面源码，如何进行解析，一般采用下面三种技术：<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1)lxml的xpath:基于XML的语义进行解析的(推荐)。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)正则表达式(RE):基于纯文本的处理。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3)纯字符串处理(不推荐)<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 总结：RE对付简单的页面没有问题，如果页面结构复杂度较高的时候，建议采用xpath，因为此时设计一个合适的RE pattern可能会远比写一个xpath要复杂。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lxml的下载地址：<a href="http://pypi.python.org/pypi/lxml/2.3">http://pypi.python.org/pypi/lxml/2.3</a><br>
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 上面介绍的httplib2的2个示例均是通过RE(正则表达式)来进行页面解析的。下面我们介绍XPath来进行页面解析想要的内容。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; XPATH基本上是用一种类&#20284;目录树的方法来描述在XML文档中的路径。比如用“/”来作为上下层级间的分隔。第一个“/”表示文档的根节点（注意，不是指文档最外层的tag节点，而是指文档本身）。比如对于一个HTML文件来说，最外层的节点应该是”/html”。同样的，“..”和“.”分别被用来表示父节点和本节点。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; XPATH返回的不一定就是唯一的节点，而是符合条件的所有节点。比如在HTML文档里使用“/html/head/scrpt”就会把head里的所有script节点都取出来。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 为了缩小定位范围，往往还需要增加过滤条件。过滤的方法就是用“[”“]”把过滤条件加上。比如在HTML文档里使用“/html/body/div[@id='main']”，即可取出body里id为main的div节点。其中@id表示属性id，类&#20284;的还可以使用如@name, @value, @href, @src, @class….&nbsp; 。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 而函数text()的意思则是取得节点包含的文本。比如：&lt;div&gt;hello&lt;p&gt;world&lt;/p&gt;&lt; /div&gt;中，用”div[text()='hello']“即可取得这个div，而world则是p的text()。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 函数position()的意思是取得节点的位置。比如“li[position()=2]”表示取得第二个li节点，它也可以被省略为“li[2]”。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 不过要注意的是数字定位和过滤条件的顺序。比如“ul/li[5][@name='hello']”表示取ul下第五项li，并且其name必须是hello，否则返回空。而如果用“ul/li[@name='hello'][5]”的意思就不同，它表示寻找ul下第五个name为”hello“的li节点。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 此外，“*”可以代替所有的节点名，比如用”/html/body/*/span”可以取出body下第二级的所有span，而不管它上一级是div还是p或是其它什么东东。<br>
+而 “descendant::”前缀可以指代任意多层的中间节点，它也可以被省略成一个“/”。比如在整个HTML文档中查找id为“leftmenu”的 div，可以用“/descendant::div[@id='leftmenu']”，也可以简单地使用“ //div[@id='leftmenu']”。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 至于“following-sibling::”前缀就如其名所说，表示同一层的下一个节点。”following-sibling::*”就是任意下一个节点，而“following-sibling::ul”就是下一个ul节点。<br>
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 下面给出一个示例，其功能为提取百度首页搜索框上面的导航条的内容：</p>
+<p></p>
+<pre name="code" class="python">#该程序是对百度的首页进行分析，并提取出其搜索框上面的导航条
+import httplib2
+import urllib2
+import re
+from lxml import etree
+
+def main():
+    http = httplib2.Http()
+    response,content = http.request(&quot;http://www.baidu.com&quot;,'GET')
+    print &quot;response:&quot;,response
+    print &quot;content:&quot;,content
+
+    tree = etree.HTML(content)
+
+    #上面的注释为要查找的部分html
+    #&lt;p id=nv&gt;&lt;a href=http://news.baidu.com&gt;新闻&lt;/a&gt;&lt;b&gt;网页&lt;/b&gt;
+    #&lt;a href=http://tieba.baidu.com&gt;贴吧&lt;/a&gt;&lt;a href=http://zhidao.baidu.com&gt;知道&lt;/a&gt;
+    #&lt;a href=http://mp3.baidu.com&gt;MP3&lt;/a&gt;&lt;a href=http://image.baidu.com&gt;图片&lt;/a&gt;
+    #&lt;a href=http://video.baidu.com&gt;视频&lt;/a&gt;&lt;a href=http://map.baidu.com&gt;地图&lt;/a&gt;&lt;/p&gt;
+
+    #下面开始查找id为nv的p标签下的所有&lt;a&gt;的href值
+    hyperlinks = tree.xpath(u'//p[@id=&quot;nv&quot;]/a/@href')
+    print &quot;hyperlinks:&quot;,hyperlinks
+    for hyperlink in hyperlinks:
+        print &quot;hyperlink:&quot;,hyperlink
+        
+    #查找id为nv的p标签下的所有&lt;a&gt;节点
+    a_nodes = tree.xpath(u'//p[@id=&quot;nv&quot;]/a')
+    print &quot;a_nodes_length:&quot;,len(a_nodes)
+    for a_node in a_nodes:
+        print &quot;&lt;a&gt;:&quot;,a_node.text,a_node.attrib['href']
+    print &quot;\n&quot;
+
+    #通过正则表达式查找&lt;p id=&quot;nv&quot;&gt;的标签内容，匹配的内容为正则表达式中的&quot;()&quot;内的内容   
+    name_flag='&lt;p id=&quot;nv&quot;&gt;(.+?)&lt;/p&gt;'
+    name_re=re.compile(name_flag,re.S)
+    name_regx=name_re.search(content)
+    print name_regx
+    name=name_regx.group(1)
+    print &quot;name:&quot;,name
+        
+if __name__ == &quot;__main__&quot;:
+    main()
+</pre>其执行结果为：
+<p></p>
+<p><img src="http://my.csdn.net/uploads/201207/24/1343139952_7793.png" alt=""><br>
+</p>
+<p>下面对其进行分析：</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 首先，对www.baidu.com进行http的get请求，然后将相应的页面结果进行分析。这里我使用了3种方式进行页面分析，前2种方式为使用xpath提取，第3种方式为通过正则表达式匹配提取。程序中有详细的注释。<br>
+</p>
+<strong><br>
+4.HTMLParser</strong>
+<p></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 该模块是用来解析HTML元素的。可以从HTML中筛选出指定的标签。下面给出一个例子，读取百度首页www.baidu.com中的所有链接，并打印出来。</p>
+<p></p>
+<pre name="code" class="python">import HTMLParser
+import urllib
+import sys
+
+#定义HTML解析器
+class parseLinks(HTMLParser.HTMLParser):
+    #该方法用来处理开始标签的，eg:&lt;div id=&quot;main&quot;&gt;
+    def handle_starttag(self, tag, attrs):
+        if tag == 'a':  #如果为&lt;a&gt;标签
+            #name为标签的属性名，如href、name、id、onClick等等
+            for name,value in attrs:    
+                if name == 'href': #这时选择href属性
+                    print &quot;name_value: &quot;,value  #href属性的值
+                    print &quot;first tag:&quot;,self.get_starttag_text() #&lt;a&gt;标签的开始tag
+                    print &quot;\n&quot;
+
+if __name__ == &quot;__main__&quot;:
+    #创建HTML解析器的实例
+    lParser = parseLinks()
+    #打开HTML文件
+    lParser.feed(urllib.urlopen(&quot;http://www.baidu.com&quot;).read())
+    lParser.close()</pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 但调用feed函数时，会自动调用handle_starttag函数，这里的handle_starttag函数是对原函数的重写。handle_starttag(self,tag,attrs)中的参数tag是标签的名字；参数attrs是一个(name,value)键&#20540;对，是通过查找到tag的&lt;&gt;括号来确定的，其中name是tag的&lt;&gt;中的属性名，value是去除引号后的&#20540;。
+<p></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 上面程序的执行结果如下：（下面的结果只是部分的屏幕截图）</p>
+<p><img src="http://my.csdn.net/uploads/201207/22/1342948265_5539.png" alt=""><br>
+</p>
+<p><strong>5.正则表达式(RE)</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 由于上面涉及到很到正则表达式的匹配问题。下面对Python中的RE使用进行简单的演示和说明。下面给出一段，我测试用的code：</p>
+<p></p>
+<pre name="code" class="python">import re  
+  
+text = &quot;JGood is a handsome booy, he is cool, clever, and so on...&quot;  
+regex1 = re.match(r&quot;\w*oo\w*&quot;, text)  
+if regex1:  
+    print &quot;regex1:&quot; , regex1
+    print &quot;result1:&quot; ,regex1.group(0)  
+else:  
+    print 'not match'
+print &quot;\n&quot;
+
+regex2 = re.compile(r'(\w*oo\w*)')
+print &quot;result2:&quot; , regex2.findall(text)
+print &quot;\n&quot;
+
+regex3 = re.compile(r'(\w*oo\w*).+?(\w*eve\w*).*')
+regex3_result = regex3.search(text)
+if regex3_result: 
+    print &quot;regex3:&quot;, regex3
+    print &quot; result3:&quot;,regex3_result.group(1),&quot; &quot;,regex3_result.group(2)
+else:
+    print 'not match'
+</pre>程序的运行结果：
+<p></p>
+<p><img src="http://my.csdn.net/uploads/201207/24/1343140237_8847.png" alt=""></p>
+<p>下面简单的讲解一下：</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; regex1是通过match方法进行匹配，match只匹配字符串的开始，如果字符串开始不符合正则表达式，则匹配失败，函数返回None；regex2是通过findall，查找所有满足的匹配；regex3是通过search匹配整个字符串，直到找到一个匹配。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 对于regex3_result.group(1),regex3_result.group(2)是什么意思呢，我搞了半天才弄明白。group(i)表示匹配的正则表达式&quot;()&quot;中的内容。如regex3_result.group(1)表示匹配的正则表达式中第一个()内的内容，regex3_result.group(2)表示匹配的正则表达式中第二个“()”的对应的字符串。group(0)表示整个表达式。group是从左向右计数的，从1开始。组可以被嵌套。计数的数&#20540;可以通过从左到右计算打开的括号数来确定。</p>
+<p>再给出一个小例子，一目了然：</p>
+<p></p>
+<pre name="code" class="python">#!python
+&gt;&gt;&gt; p = re.compile('(a(b)c)d')
+&gt;&gt;&gt; m = p.match('abcd')
+&gt;&gt;&gt; m.group(0)
+'abcd'
+&gt;&gt;&gt; m.group(1)
+'abc'
+&gt;&gt;&gt; m.group(2)
+'b'</pre><br>
+<p><strong>6.如何判断网络连接</strong></p>
+<p>有的软件如果需要访问网络，这时我们就需要定时地检测网络的连接，下面的代码给出了如何检测网络连接：当连接时返回1；当网络断掉时返回0。原理就是通过http去请求网页，如果能够请求到则网络正常，如果请求出现异常则网络断掉。<strong><br>
+</strong></p>
+<p></p>
+<pre name="code" class="python">def check_network():
+    import httplib2
+    try:
+        http = httplib2.Http()
+        resp, content = http.request(&quot;http://www.baidu.com&quot;)
+    except:
+        return 0
+    return 1</pre><br>
+<br>
+<p></p>
+<p></p>
+
+</div>
+<div class="share_buttons" id="sharePanel"></div>
+<!--192.168.1.236-->
+<div class="article_next_prev">
+    <li class="prev_article"><span>上一篇：</span><a href="/lianxiang_biancheng/article/details/7767501">PyQt开发讲解</a></li>
+    <li class="next_article"><span>下一篇：</span><a href="/lianxiang_biancheng/article/details/7803545">Python中Sqlite的使用&amp;ORM的使用&amp;如何通过code初始化DB</a></li>
+</div>
+
+
+            <div id="digg" ArticleId="7772487">
+            <dl id="btnDigg" class="digg digg_disable">
+                <dt>顶</dt>
+                <dd>0</dd>
+            </dl>
+            <dl id="btnBury" class="digg digg_disable">
+                <dt>踩</dt>
+                <dd>0</dd>
+            </dl>
+        </div>
+
+</div>
+<div id="ad_cen"></div>
+<script type="text/javascript">
+    new Ad(4, 'ad_cen');
+</script>
+<div id="comment_title" class="panel_head">查看评论<a name="comments"></a></div>
+<div id="comment_list"></div>
+<div id="comment_bar"></div>
+<div id="comment_form"></div>
+<div class="announce">* 以上用户言论只代表其个人观点，不代表CSDN网站的观点或立场<a name="reply"></a><a name="quote"></a></div>
+<script type="text/javascript">
+    var fileName = '7772487';
+    var commentscount = 0;
+    var islock = false
+</script>
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/comment.js?v=1.8"></script>
+<div id="ad_bot"></div>
+<script type="text/javascript">
+    new Ad(5, 'ad_bot');
+</script>
+<div id="report_dialog"></div>
+
+<div id="d-top" style="display:none;">
+<a id="d-top-a" href="#" title="回到顶部">
+<img src="http://static.blog.csdn.net/images/top.png" alt="TOP" /></a>
+</div>
+<script type="text/javascript">
+    $(function(){
+        var d_top=$('#d-top');
+        document.onscroll=function(){
+            var scrTop=(document.body.scrollTop||document.documentElement.scrollTop);
+            if(scrTop>500){
+                d_top.show();
+            }else{
+                d_top.hide();
+            }
+        }
+        $('#d-top-a').click(function(){
+            scrollTo(0,0);
+            this.blur();
+            return false;
+        });
+    });
+</script>
+
+
+
+<div class="clear"></div>
+</div>
+</div>
+
+<div id="side">
+<div class="side">
+<div id="panel_Profile" class="panel">
+    <ul class="panel_head"><span>个人资料</span></ul>
+    <ul class="panel_body profile">
+        <div id="blog_userface">
+            <a href="http://my.csdn.net/lianxiang_biancheng" target="_blank">
+            <img src="http://avatar.csdn.net/5/0/1/1_lianxiang_biancheng.jpg" title="访问我的空间" style="max-width:90%"/>
+            </a>
+            <br />
+            <span><a href="http://my.csdn.net/lianxiang_biancheng" class="user_name" target="_blank">lianxiang_biancheng</a></span>
+        </div>
+<div class="interact">
+<!--<a href="#" class="attented" title="已关注"></a>-->
+<a href="javascript:void(0);" class="attent" id="span_add_follow" title="[加关注]"></a>
+<a href="javascript:void(0);" class="letter" onclick="loginto(1)" title="[发私信]"></a>
+</div>
+        <div id="blog_medal">
+        </div>
+        <ul id="blog_rank">
+            <li>访问：<span>6555次</span></li>
+            <li>积分：<span>214分</span></li>
+            <li>排名：<span>千里之外</span></li>
+        </ul>
+        <ul id="blog_statistics">
+            <li>原创：<span>15篇</span></li>
+            <li>转载：<span>0篇</span></li>
+            <li>译文：<span>0篇</span></li>
+            <li>评论：<span>5条</span></li>
+        </ul>
+    </ul>
+</div>
+<script type="text/javascript">
+    var _blogger = 'lianxiang_biancheng';
+</script>
+
+
+
+<div class="panel" id="panel_Search">
+    <ul class="panel_head"><span>文章搜索</span></ul>
+    <ul class="panel_body">
+        <form id="frmSearch" action="http://so.csdn.net/search" class="form_search" target="_blank">
+        <span><input id="inputSearch" type="text" class="blogsearch" title="请输入关键字" /></span>
+        <input id="btnSubmit" type="submit" value="搜索" title="search in blog" />
+        <input type="hidden" name="q" id="inputQ" />
+        <input type="hidden" name="t" value="blog" />
+        <a id="btnSearchBlog" target="_blank"></a>
+        </form>
+    </ul>
+</div><div id="panel_Category" class="panel">
+    <ul class="panel_head"><span>文章分类</span></ul>
+    <ul class="panel_body">
+        <li>
+        <a href="http://blog.csdn.net/lianxiang_biancheng/article/category/1169744">搜索</a><span>(2)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/lianxiang_biancheng/article/category/1167760">C++</a><span>(1)</span>
+        </li>
+        <li>
+        <a href="http://blog.csdn.net/lianxiang_biancheng/article/category/1188052">Python</a><span>(7)</span>
+        </li>
+    </ul>
+</div><div id="panel_Archive" class="panel">
+    <ul class="panel_head"><span>文章存档</span></ul>
+    <ul class="panel_body">
+        <div id="archive_list">
+        <!--归档统计-->
+        <li><a href="http://blog.csdn.net/lianxiang_biancheng/article/month/2012/08">2012年08月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/lianxiang_biancheng/article/month/2012/07">2012年07月</a><span>(5)</span></li><li><a href="http://blog.csdn.net/lianxiang_biancheng/article/month/2012/06">2012年06月</a><span>(4)</span></li><li><a href="http://blog.csdn.net/lianxiang_biancheng/article/month/2012/05">2012年05月</a><span>(4)</span></li><li><a href="http://blog.csdn.net/lianxiang_biancheng/article/month/2012/01">2012年01月</a><span>(1)</span></li>
+        </div>
+    </ul>
+</div>
+<div id="hotarticls" class="panel">
+    <ul class="panel_head"><span>阅读排行</span></ul>
+    <ul class="panel_body itemlist">
+        <li>
+            <a href="/lianxiang_biancheng/article/details/7767501" title="PyQt开发讲解">PyQt开发讲解</a><span>(1626)</span>
+        </li>
+        <li>
+            <a href="/lianxiang_biancheng/article/details/7772487" title="Python中网络页面抓取和页面分析">Python中网络页面抓取和页面分析</a><span>(1050)</span>
+        </li>
+        <li>
+            <a href="/lianxiang_biancheng/article/details/7557446" title="BD 2012年春季实习生校园招聘笔试题和答案">BD 2012年春季实习生校园招聘笔试题和答案</a><span>(746)</span>
+        </li>
+        <li>
+            <a href="/lianxiang_biancheng/article/details/7752848" title="Python+Eric+PyQt的安装配置和第一个程序HelloWorld">Python+Eric+PyQt的安装配置和第一个程序HelloWorld</a><span>(559)</span>
+        </li>
+        <li>
+            <a href="/lianxiang_biancheng/article/details/7803545" title="Python中Sqlite的使用&amp;ORM的使用&amp;如何通过code初始化DB">Python中Sqlite的使用&amp;ORM的使用&amp;如何通过code初始化DB</a><span>(400)</span>
+        </li>
+        <li>
+            <a href="/lianxiang_biancheng/article/details/7197499" title="MFC中更改窗口的样式">MFC中更改窗口的样式</a><span>(379)</span>
+        </li>
+        <li>
+            <a href="/lianxiang_biancheng/article/details/7907776" title="文件锁和Python多进程的使用">文件锁和Python多进程的使用</a><span>(344)</span>
+        </li>
+        <li>
+            <a href="/lianxiang_biancheng/article/details/7803564" title="Python中线程的使用">Python中线程的使用</a><span>(332)</span>
+        </li>
+        <li>
+            <a href="/lianxiang_biancheng/article/details/7585539" title="条件编译和extern &quot;C&quot;的用法总结">条件编译和extern &quot;C&quot;的用法总结</a><span>(259)</span>
+        </li>
+        <li>
+            <a href="/lianxiang_biancheng/article/details/7674844" title="python实现网络爬虫">python实现网络爬虫</a><span>(200)</span>
+        </li>
+    </ul>
+</div>
+<div id="hotarticls2" class="panel">
+    <ul class="panel_head"><span>评论排行</span></ul>
+    <ul class="panel_body itemlist">
+        <li>
+            <a href="/lianxiang_biancheng/article/details/7557446" title="BD 2012年春季实习生校园招聘笔试题和答案">BD 2012年春季实习生校园招聘笔试题和答案</a><span>(4)</span>
+        </li>
+        <li>
+            <a href="/lianxiang_biancheng/article/details/7907776" title="文件锁和Python多进程的使用">文件锁和Python多进程的使用</a><span>(1)</span>
+        </li>
+        <li>
+            <a href="/lianxiang_biancheng/article/details/7803564" title="Python中线程的使用">Python中线程的使用</a><span>(0)</span>
+        </li>
+        <li>
+            <a href="/lianxiang_biancheng/article/details/7803545" title="Python中Sqlite的使用&amp;ORM的使用&amp;如何通过code初始化DB">Python中Sqlite的使用&amp;ORM的使用&amp;如何通过code初始化DB</a><span>(0)</span>
+        </li>
+        <li>
+            <a href="/lianxiang_biancheng/article/details/7772487" title="Python中网络页面抓取和页面分析">Python中网络页面抓取和页面分析</a><span>(0)</span>
+        </li>
+        <li>
+            <a href="/lianxiang_biancheng/article/details/7767501" title="PyQt开发讲解">PyQt开发讲解</a><span>(0)</span>
+        </li>
+        <li>
+            <a href="/lianxiang_biancheng/article/details/7752848" title="Python+Eric+PyQt的安装配置和第一个程序HelloWorld">Python+Eric+PyQt的安装配置和第一个程序HelloWorld</a><span>(0)</span>
+        </li>
+        <li>
+            <a href="/lianxiang_biancheng/article/details/7674844" title="python实现网络爬虫">python实现网络爬虫</a><span>(0)</span>
+        </li>
+        <li>
+            <a href="/lianxiang_biancheng/article/details/7674559" title="多线程概述">多线程概述</a><span>(0)</span>
+        </li>
+        <li>
+            <a href="/lianxiang_biancheng/article/details/7671841" title="双线程高效下载问题">双线程高效下载问题</a><span>(0)</span>
+        </li>
+    </ul>
+</div>
+<div id="homepageArticles" class="panel">
+    <ul class="panel_head"><span>推荐文章</span></ul>
+    <ul class="panel_body" id="ad_commend">
+    </ul>
+</div>
+<script type="text/javascript">
+    new Ad(12, 'ad_commend');
+</script><div id="newcomments" class="panel">
+<ul class="panel_head"><span>最新评论</span></ul>
+<ul class="panel_body itemlist">
+    <li>
+    <a href="/lianxiang_biancheng/article/details/7907776#comments">文件锁和Python多进程的使用</a>
+    <p style="margin:0px;"><a href="/zhouyuqwert" class="user_name">zhouyuqwert</a>:
+见博主示例中对write_file和read_file都没加锁，不知道博主是否试出过多个进程同时wr...
+    </p>
+    </li>
+    <li>
+    <a href="/lianxiang_biancheng/article/details/7557446#comments">BD 2012年春季实习生校园招聘笔试题和答案</a>
+    <p style="margin:0px;"><a href="/lianxiang_biancheng" class="user_name">lianxiang_biancheng</a>:
+@fzp218:恩。你很好地总结了，单链表、循环链表之间如何判断是否相交的方法。
+    </p>
+    </li>
+    <li>
+    <a href="/lianxiang_biancheng/article/details/7557446#comments">BD 2012年春季实习生校园招聘笔试题和答案</a>
+    <p style="margin:0px;"><a href="/fzp218" class="user_name">fzp218</a>:
+网络爬虫那题，如果有循环，在海量数据无法一一记录的情况下，又如何判断是否已经到链表尾呢？我的方法是：...
+    </p>
+    </li>
+    <li>
+    <a href="/lianxiang_biancheng/article/details/7557446#comments">BD 2012年春季实习生校园招聘笔试题和答案</a>
+    <p style="margin:0px;"><a href="/lianxiang_biancheng" class="user_name">lianxiang_biancheng</a>:
+@zhangchunminggucas:谢谢
+    </p>
+    </li>
+    <li>
+    <a href="/lianxiang_biancheng/article/details/7557446#comments">BD 2012年春季实习生校园招聘笔试题和答案</a>
+    <p style="margin:0px;"><a href="/zhangchunminggucas" class="user_name">zhangchunminggucas</a>:
+题目出的很不错，算法不难，就是看会不会灵活运用。
+    </p>
+    </li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+</div>
+
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/newblog.min.js"></script>
+<script type="text/javascript" src="http://medal.blog.csdn.net/showblogmedal.ashx?blogid=1226853"></script>
+
+<script type="text/javascript" src="http://csdnimg.cn/pubfooter/js/publib_footer.js"></script>
+
+<script type="text/javascript" src="http://passport.csdn.net/content/loginbox/login.js"></script>
+<script type="text/javascript">document.write("<img src=http://counter.csdn.net/pv.aspx?id=24 border=0 width=0 height=0>");</script>
+<script type="text/javascript" src="http://www.csdn.net/ui/scripts/Csdn/counter.js"></script>
+
+
+<script type="text/javascript" src="http://ad.csdn.net/scripts/ad-blog.js"></script>
+</div>
+</body>
+</html>

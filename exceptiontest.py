@@ -1,0 +1,1 @@
+#!/usr/bin/python# Filename: try_except.pyimport systry:	1/0	asdfexcept:    print '\nSome error/exception occurred.'    # here, we are not exiting the programprint 'Done'

@@ -1,0 +1,7 @@
+asdfimport os
+f = open('log.txt', 'r')
+for line in f.readlines():
+	print repr(line.strip()),
+f.close()
+
+1afaa aaaa
