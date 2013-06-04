@@ -5,11 +5,11 @@ from sys import argv
 from os import makedirs, unlink, sep
 from os.path import dirname, exists, isdir, splitext
 from string import replace, find, lower
+from LinkParser import LinkParser
 from urllib import urlretrieve
 from urlparse import urlparse, urljoin, urldefrag
 from formatter import DumbWriter, AbstractFormatter
 from cStringIO import StringIO
-from myparser import Parser
 
 class Retriever(object):# download Web pages
 
@@ -43,21 +43,26 @@ class Retriever(object):# download Web pages
 		return retval
 
 	def parseAndGetLinks(self):# parse HTML, save links
-		myparser = Parser(self.file)
-		return myparser.parseanchorlist()
-		
+		linkparser = LinkParser(self.file)
+		return linkparser.anchorlist()
+
 class Crawler(object):# manage entire crawling process
 
 	count = 0# static downloaded page counter
 
 	def __init__(self, url):
 		self.q = [url]
-		self.seen = ['http://www/51voa.com/Development_Report_1.html']
+		self.seen = []
 		print url
 		self.dom = urlparse(url)[1]
 		print "dom: ", self.dom
 
 	def getPage(self, url):
+		# filter asp webpage
+		if find(url, ".asp") != -1:
+			self.seen.append(url)
+			return
+
 		r = Retriever(url)
 		retval = r.download()
 		if retval[0] == '*': # error situation, do not parse
@@ -70,7 +75,6 @@ class Crawler(object):# manage entire crawling process
 		self.seen.append(url)
 
 		links = r.parseAndGetLinks() # get and process links
-		print links
 		for eachLink in links:
 			print eachLink
 			if eachLink[:4] != 'http' and \
@@ -99,6 +103,8 @@ class Crawler(object):# manage entire crawling process
 
 	def go(self):# process links in queue
 		while self.q:
+			#if self.q != []:
+			#	print self.q
 			url = self.q.pop()
 			self.getPage(url)
 
