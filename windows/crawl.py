@@ -5,11 +5,11 @@ from sys import argv
 from os import makedirs, unlink, sep
 from os.path import dirname, exists, isdir, splitext
 from string import replace, find, lower
-from htmllib import HTMLParser
 from urllib import urlretrieve
 from urlparse import urlparse, urljoin, urldefrag
 from formatter import DumbWriter, AbstractFormatter
 from cStringIO import StringIO
+from myparser import Parser
 
 class Retriever(object):# download Web pages
 
@@ -43,18 +43,16 @@ class Retriever(object):# download Web pages
 		return retval
 
 	def parseAndGetLinks(self):# parse HTML, save links
-		self.parser = HTMLParser(AbstractFormatter(DumbWriter(StringIO())))
-		self.parser.feed(open(self.file).read())
-		self.parser.close()
-		return self.parser.anchorlist
-
+		myparser = Parser(self.file)
+		return myparser.parseanchorlist()
+		
 class Crawler(object):# manage entire crawling process
 
 	count = 0# static downloaded page counter
 
 	def __init__(self, url):
 		self.q = [url]
-		self.seen = []
+		self.seen = ['http://www/51voa.com/Development_Report_1.html']
 		print url
 		self.dom = urlparse(url)[1]
 		print "dom: ", self.dom
