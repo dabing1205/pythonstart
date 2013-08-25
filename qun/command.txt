@@ -1,0 +1,1 @@
+curl -c cookie.txt -o login.html -A "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)"  -X post -d "input_name=admin1782&input_pwd=520123&input_rem=true" "http://www.1782.cc/admini5/index.asp?action=check"
