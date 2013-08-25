@@ -1,1 +1,5 @@
-curl -c cookie.txt -o login.html -A "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)"  -X post -d "input_name=admin1782&input_pwd=520123&input_rem=true" "http://www.1782.cc/admini5/index.asp?action=check"
+curl -D cookie.txt -o login.html -d "input_name=admin1782&input_pwd=520123&input_rem=true" -A "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)"  -e "http://www.1782.cc/admini5/index.asp?action=login"  "http://www.1782.cc/admini5/index.asp?action=check"
+
+curl -b cookie.txt -o caiji.html -d "ac=select&rid=5&ids=51394"  -A "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)"  -e "http://www.1782.cc/admini5/admin_20131001.asp?ac=list&rid=5"  "http://www.1782.cc/admini5/admin_20131001.asp"
+
+curl -b cookie.txt -o makehtml.html -d "m_id=51394&movetype=&ptopic=0" -A "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)"  -e "http://www.1782.cc/admini5/admin_20131001.asp?ac=list&rid=5"  "http://www.1782.cc/admini5/admin_makehtml.asp?action=selected"

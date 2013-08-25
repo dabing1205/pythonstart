@@ -1,9 +1,13 @@
 HTTP/1.1 200 OK
 Cache-Control: private
 Content-Type: text/html; Charset=gbk
-Set-Cookie: ASPSESSIONIDQQAQCRBS=CDNCELGAPDNOLPLFPKLOBACL; path=/
+Set-Cookie: checkadmin1782=7006bf7ee0e6ea4f94153bec68d765c6; expires=Mon, 25-Aug-2014 14:52:58 GMT; path=/
+Set-Cookie: m%5Flevel=0; expires=Mon, 25-Aug-2014 14:52:58 GMT; path=/
+Set-Cookie: m%5Fid=1; expires=Mon, 25-Aug-2014 14:52:58 GMT; path=/
+Set-Cookie: m%5Fusername=admin1782; expires=Mon, 25-Aug-2014 14:52:58 GMT; path=/
+Set-Cookie: ASPSESSIONIDQQAQCRBS=FKCDELGANGJNFLKHAFICLJIC; path=/
 Server: IIS
 X-Powered-By: WAF/2.0
-Date: Sun, 25 Aug 2013 13:41:23 GMT
+Date: Sun, 25 Aug 2013 14:52:59 GMT
 Connection: close
 
